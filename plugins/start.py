@@ -94,7 +94,7 @@ async def start_command(client: Client, message: Message):
 
         for snt_msg in snt_msgs:
             try:
-                await snt_msg.deletpass
+                await snt_msg.delete()
                 await k.edit_text("<b>Your video / file is successfully deleted !</b>")
             except:
                 pass
