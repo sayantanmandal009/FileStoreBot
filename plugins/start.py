@@ -90,7 +90,7 @@ async def start_command(client: Client, message: Message):
 
         for data in CodeXBotz:
             try:
-                await data.delete()
+                await message.delete()
                 await k.edit_text("<b>Your video / file is successfully deleted !</b>")
             except:
                 pass
