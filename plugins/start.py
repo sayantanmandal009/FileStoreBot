@@ -88,7 +88,7 @@ async def start_command(client: Client, message: Message):
         k = await message.reply_text("<b>❗️ <u>baka!</u> ❗️</b>\n\n<b>This video / file will be deleted in 10 minutes (Due to copyright issues).\n\n📌 Please forward this video / file to somewhere else and start downloading there.</b>")
         await asyncio.sleep(SECONDS)
 
-        for data in Codeflix:
+        for data in CodeXBotz:
             try:
                 await data.delete()
                 await k.edit_text("<b>Your video / file is successfully deleted !</b>")
