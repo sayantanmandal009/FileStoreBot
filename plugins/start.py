@@ -97,6 +97,7 @@ async def start_command(client: Client, message: Message):
                 await k.edit_text("<b>Your video / file is successfully deleted !</b>")
             except:
                 pass
+                
         return
     else:
         reply_markup = InlineKeyboardMarkup(
