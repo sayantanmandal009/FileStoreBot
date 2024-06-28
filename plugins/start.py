@@ -64,7 +64,7 @@ async def start_command(client: Client, message: Message):
             return
         await temp_msg.delete()
 
-        Codeflix = []
+        CodeXBotz = []
         for msg in messages:
 
             if bool(CUSTOM_CAPTION) & bool(msg.video):
@@ -80,18 +80,18 @@ async def start_command(client: Client, message: Message):
             try:
                 snt_msg = await msg.copy(chat_id=message.from_user.id, caption = caption, parse_mode = ParseMode.HTML, reply_markup = reply_markup, protect_content=PROTECT_CONTENT)
                 await asyncio.sleep(1)
-                Codeflix.append(snt_msg)
+                CodeXBotz.append(snt_msg)
             except FloodWait as e:
                 await asyncio.sleep(e.x)
                 snt_msg = await msg.copy(chat_id=message.from_user.id, caption = caption, parse_mode = ParseMode.HTML, reply_markup = reply_markup, protect_content=PROTECT_CONTENT)
-                Codeflix.append(snt_msg)
+                CodeXBotz.append(snt_msg)
             except:
                 pass
 
         k = await message.reply_text("<b>❗️ <u>WARNING!</u> ❗️</b>\n\n<b>This video / file will be deleted in 10 minutes (Due to copyright issues).\n\n📌 Please forward this video / file to somewhere else and start downloading there.</b>")
         await asyncio.sleep(SECONDS)
 
-        for data in Codeflix:
+        for data in CodeXBotz:
             try:
                 await data.delete()
                 await k.edit_text("<b>Your video / file is successfully deleted !</b>")
